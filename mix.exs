@@ -18,7 +18,7 @@ defmodule TwitterUpdater.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {TwitterUpdater, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :extwitter, :phoenix_ecto, :postgrex, :csv]]
+     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :extwitter, :phoenix_ecto, :postgrex, :csv, :exvcr, :httpoison, :ex_machina, :faker]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,7 +39,12 @@ defmodule TwitterUpdater.Mixfile do
      {:cowboy, "~> 1.0"},
      {:oauth, github: "tim/erlang-oauth"},
      {:extwitter, "~> 0.7.2"},
-     {:csv, "~> 1.4"}]
+     {:csv, "~> 1.4"},
+     {:exvcr, "~> 0.8.5"},
+     {:httpoison, "~> 0.11.0"},
+     {:ex_machina, "~> 1.0"},
+     {:faker, "~> 0.7"}
+   ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
